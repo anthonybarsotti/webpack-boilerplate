@@ -1,8 +1,7 @@
 {
   "name": "webpack-boilerplate",
   "version": "0.0.1",
-  "description": "A boilerplate for Express/",
-  "main": "index.js",
+  "description": "A boilerplate for Express/React apps using Webpack to build",
   "scripts": {
     "prebuild:prod": "rm -rf ./build",
     "build:prod": "webpack --config ./webpack/webpack.prod.js",
