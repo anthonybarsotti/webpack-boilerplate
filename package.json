@@ -1,0 +1,53 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate for Express/",
+  "main": "index.js",
+  "scripts": {
+    "prebuild:prod": "rm -rf ./build",
+    "build:prod": "webpack --config ./webpack/webpack.prod.js",
+    "prebuild:dev": "rm -rf ./build",
+    "build:dev": "webpack --config ./webpack/webpack.dev.js",
+    "start": "NODE_ENV=production node ./server",
+    "start:dev": "NODE_ENV=development node ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonybarsotti/webpack-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack"
+  ],
+  "author": "Tony Barsotti",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "~6.9.1",
+    "express": "~4.13.4",
+    "isomorphic-fetch": "~2.2.1",
+    "react": "~15.1.0",
+    "react-dom": "~15.1.0",
+    "react-redux": "~4.4.5",
+    "redux": "~3.5.2",
+    "redux-thunk": "~2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "~6.2.4",
+    "babel-preset-es2015": "~6.9.0",
+    "babel-preset-react": "~6.5.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "~0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.19.0",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-import": "~8.1.2",
+    "postcss-loader": "~0.9.1",
+    "postcss-reporter": "^1.3.3",
+    "style-loader": "^0.13.1",
+    "webpack": "~1.13.1",
+    "webpack-dev-middleware": "^1.6.1"
+  }
+}
