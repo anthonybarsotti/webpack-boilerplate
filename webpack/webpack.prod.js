@@ -9,14 +9,14 @@ module.exports = generateConfig({
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
       }
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production'),
       }
     })
   ],
-  devtool: 'source-map'
+  devtool: 'source-map',
 });

@@ -1,10 +1,10 @@
 
 // Dependencies
-const express = require('express');
-const path = require('path');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackConfig = require('../../webpack/webpack.dev');
+import express from 'express';
+import path from 'path';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackConfig from '../../webpack/webpack.dev';
 
 module.exports = () => {
   const compiler = webpack(webpackConfig);
@@ -25,4 +25,4 @@ module.exports = () => {
   });
 
   return app;
-}
+};
