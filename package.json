@@ -1,5 +1,5 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "webpack-universal-boilerplate",
   "version": "0.0.1",
   "description": "A boilerplate for Express/React apps using Webpack to build",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/anthonybarsotti/webpack-boilerplate.git"
+    "url": "https://github.com/anthonybarsotti/webpack-universal-boilerplate.git"
   },
   "keywords": [
     "react",
