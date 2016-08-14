@@ -8,9 +8,9 @@ module.exports = generateConfig({
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
-    })
+        'NODE_ENV': JSON.stringify('development'),
+      },
+    }),
   ],
-  devtool: 'eval-source-map'
+  devtool: 'eval-source-map',
 });

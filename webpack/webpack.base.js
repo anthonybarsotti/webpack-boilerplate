@@ -18,44 +18,46 @@ module.exports = (config) => ({
   output: {
     path: path.resolve(process.cwd(), 'build', 'client'),
     publicPath: '/assets',
-    filename: 'app.js'
+    filename: 'app.js',
   },
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
       },
       {
         test: /\.css$/,
-        loader: ExtractTextWebpackPlugin.extract('style', 'css!postcss')
+        loader: ExtractTextWebpackPlugin.extract('style', 'css!postcss'),
       },
       {
         test: /\.(jpg|png|gif|svg)$/,
         loader: 'file',
         query: {
-          name: 'images/[name].[ext]'
-        }
-      }
-    ]
+          name: 'images/[name].[ext]',
+        },
+      },
+    ],
   },
   postcss() {
     return [
       postcssImport(),
       cssnext(),
       postcssReporter({
-        clearMessages: true
-      })
+        clearMessages: true,
+      }),
     ];
   },
   plugins: config.plugins.concat([
     new CopyWebpackPlugin([
-      { from: path.join(process.cwd(), 'server'), to: path.join(process.cwd(), 'build', 'server') },
-      { from: path.join(process.cwd(), 'package.json'), to: path.join(process.cwd(), 'build') }
+      {
+        from: path.join(process.cwd(), 'package.json'),
+        to: path.join(process.cwd(), 'build'),
+      },
     ]),
     new ExtractTextWebpackPlugin('[name].css', {
-      allChunks: true
+      allChunks: true,
     }),
     new HtmlWebpackPlugin({
       template: path.join(process.cwd(), 'client', 'index.html'),
@@ -66,7 +68,7 @@ module.exports = (config) => ({
         useShortDoctype: true,
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: false
+        keepClosingSlash: false,
       }
     })
   ]),
@@ -74,11 +76,12 @@ module.exports = (config) => ({
     modules: ['app', 'node_modules'],
     extensions: [
       '',
-      '.js'
+      '.js',
+      '.jsx',
     ],
   },
   target: 'web',
   progress: true,
   debug: true,
-  devtool: config.devtool
+  devtool: config.devtool,
 });
