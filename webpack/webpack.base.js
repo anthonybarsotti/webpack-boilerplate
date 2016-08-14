@@ -69,11 +69,14 @@ module.exports = (config) => ({
         removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: false,
-      }
-    })
+      },
+    }),
   ]),
   resolve: {
-    modules: ['app', 'node_modules'],
+    modules: [
+      'app',
+      'node_modules',
+    ],
     extensions: [
       '',
       '.js',
