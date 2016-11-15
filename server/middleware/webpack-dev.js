@@ -1,13 +1,14 @@
 
 // Dependencies
+
 import express from 'express';
 import path from 'path';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../../webpack/webpack.dev';
 
-module.exports = () => {
-  const compiler = webpack(webpackConfig);
+module.exports = function() {
+  const compiler   = webpack(webpackConfig);
   const middleware = webpackDevMiddleware(compiler, {
     noInfo: true,
     publicPath: webpackConfig.output.publicPath,

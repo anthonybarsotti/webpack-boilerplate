@@ -1,7 +1,8 @@
 
 // Dependencies
-const webpack = require('webpack');
-const path = require('path');
+
+const webpack        = require('webpack');
+const path           = require('path');
 const generateConfig = require('./webpack.base');
 
 module.exports = generateConfig({

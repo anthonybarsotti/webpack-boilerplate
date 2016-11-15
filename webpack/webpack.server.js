@@ -1,8 +1,11 @@
 
 // Dependencies
+
 const webpack = require('webpack');
-const path = require('path');
-const fs = require('fs');
+const path    = require('path');
+const fs      = require('fs');
+
+// Constants
 
 const nodeModules = {};
   fs.readdirSync('node_modules')

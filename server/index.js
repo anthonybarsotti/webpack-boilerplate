@@ -1,14 +1,17 @@
 
 // Dependencies
+
 import express from 'express';
 import path from 'path';
 
 // Constants
-const app = express();
+
+const app    = express();
 const isProd = process.env.NODE_ENV === 'production';
-const port = process.env.PORT || 8080;
+const port   = process.env.PORT || 8080;
 
 // Use webpack dev middleware if necessary
+
 if (!isProd) {
   const webpackDevMiddleware = require('./middleware/webpack-dev');
 
