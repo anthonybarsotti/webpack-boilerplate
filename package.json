@@ -7,9 +7,9 @@
     "build-client:dev": "webpack --config ./webpack/webpack.dev.js",
     "build-server": "webpack --config ./webpack/webpack.server.js",
     "prebuild:dev": "rm -rf ./build",
-    "build:dev": "yarn run build-client:dev && yarn run build-server",
+    "build:dev": "yarn build-client:dev && yarn build-server",
     "prebuild:prod": "rm -rf ./build",
-    "build:prod": "yarn run build-client:prod && yarn run build-server",
+    "build:prod": "yarn build-client:prod && yarn build-server",
     "serve": "NODE_ENV=production node ./server",
     "watch": "NODE_ENV=development babel-node ./server"
   },
